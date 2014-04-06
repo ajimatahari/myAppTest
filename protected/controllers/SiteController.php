@@ -101,6 +101,13 @@ class SiteController extends Controller
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */
+        
+        /*mulai dari sini untuk memanggil controller dari menu tanpa harus menampakkan indexnya*/
+        public function actionUser(){
+            Yii::app()->runController('user/index');
+            
+        }
+        /*mulai dari sini untuk memanggil controller dari menu tanpa harus menampakkan indexnya*/
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();

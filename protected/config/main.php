@@ -48,6 +48,8 @@ return array(
                                 //'login'=>'site/login',
                                 //'about'=>'page/about',
                                 //'password'=>'site/forgot',
+                                'user/'=>'user/index',
+                                '<controller>'=>'<controller>/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
