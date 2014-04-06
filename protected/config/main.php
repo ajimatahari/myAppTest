@@ -40,10 +40,20 @@ return array(
 		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+                        'showScriptName'=>false,
+                        'caseSensitive'=>false,
 			'rules'=>array(
+                                ''=>'site/index',
+                                '<action>'=>'site/<action>',
+                                //'login'=>'site/login',
+                                //'about'=>'page/about',
+                                //'password'=>'site/forgot',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                                'gii'=>'gii',
+                                'gii/<controller:[\w\-]+>'=>'gii/<controller>',
+                                'gii/<controller:[\w\-]+>/<action:\w+>'=>'gii/<controller>/<action>',
 			),
 		),
 		
