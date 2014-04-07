@@ -5,6 +5,7 @@ class SiteController extends Controller
 	/**
 	 * Declares class-based actions.
 	 */
+        private $MenuName;
 	public function actions()
 	{
 		return array(
@@ -103,8 +104,8 @@ class SiteController extends Controller
 	 */
         
         /*mulai dari sini untuk memanggil controller dari menu tanpa harus menampakkan indexnya*/
-        public function actionUser(){
-            Yii::app()->runController('user/index');
+        public function actionCall($menuname){
+            Yii::app()->runController($menuname.'/index');
             
         }
         /*mulai dari sini untuk memanggil controller dari menu tanpa harus menampakkan indexnya*/
