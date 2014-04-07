@@ -104,7 +104,7 @@ class SiteController extends Controller
 	 */
         
         /*mulai dari sini untuk memanggil controller dari menu tanpa harus menampakkan indexnya*/
-        public function actionCall($menuname){
+        public function actionCall($menuname){ //action ini memanggil controller
             Yii::app()->runController($menuname.'/index');
             
         }
