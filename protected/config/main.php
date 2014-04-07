@@ -25,7 +25,7 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'mergangsan',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
+			'ipFilters'=>array('127.0.0.1','::1','localhost'),
 		),
 		
 	),
@@ -43,13 +43,13 @@ return array(
                         'showScriptName'=>false,
                         'caseSensitive'=>false,
 			'rules'=>array(
-                                ''=>'site/index',
-                                '<action>'=>'site/<action>',
+                                //''=>'site/index',
+                                //'<action>'=>'site/<action>',
                                 //'login'=>'site/login',
                                 //'about'=>'page/about',
                                 //'password'=>'site/forgot',
-                                'user/'=>'user/index',
-                                '<controller>'=>'<controller>/index',
+                                //'user/'=>'user/index',
+                                '<controller:\w+>'=>'<controller>/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',

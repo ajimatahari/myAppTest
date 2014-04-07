@@ -1682,3 +1682,241 @@ Stack trace:
 REQUEST_URI=/ajimatahari/call/MenuName/user
 HTTP_REFERER=http://localhost/ajimatahari/
 ---
+2014/04/07 08:47:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(624): CApplication->getDb()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(User))
+#7 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('User')
+#8 C:\xampp\htdocs\ajimatahari\protected\controllers\UserController.php(125): CActiveDataProvider->__construct('User')
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('index')
+#19 C:\xampp\htdocs\ajimatahari\protected\controllers\SiteController.php(108): CWebApplication->runController('user/index')
+#20 [internal function]: SiteController->actionCall('user')
+#21 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#22 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('call')
+#27 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/call')
+#28 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/ajimatahari/call?menuname=user
+HTTP_REFERER=http://localhost/ajimatahari/
+---
+2014/04/07 14:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "call/menuname/user".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('call/menuname/u...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/call/menuname/user
+---
+2014/04/07 14:08:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('user')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('user')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/user')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ajimatahari/user
+HTTP_REFERER=http://localhost/ajimatahari/user/admin
+---
+2014/04/07 14:08:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('user')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('user')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/user')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ajimatahari/user
+HTTP_REFERER=http://localhost/ajimatahari/user/admin
+---
+2014/04/07 14:09:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('user')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('user')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/user')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ajimatahari/user
+HTTP_REFERER=http://localhost/ajimatahari/user/admin
+---
+2014/04/07 09:10:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/gii/index
+---
+2014/04/07 14:10:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('gii')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('gii')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/gii')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ajimatahari/gii/
+---
+2014/04/07 09:11:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/login".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/login')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/gii/login
+---
+2014/04/07 14:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('gii')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('gii')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/gii')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ajimatahari/gii
+---
+2014/04/07 09:13:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\ajimatahari\protected\controllers\SiteController.php(108): CWebApplication->runController('gii/index')
+#1 [internal function]: SiteController->actionCall('gii')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('call')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/call')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ajimatahari/call?menuname=gii
+---
+2014/04/07 14:13:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('user')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('user')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/user')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ajimatahari/user
+HTTP_REFERER=http://localhost/ajimatahari/user/admin
+---
+2014/04/07 15:04:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('gii')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('gii')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/gii')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ajimatahari/gii
+---
+2014/04/07 15:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/gii".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('index/gii')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/index/gii
+---
+2014/04/07 10:06:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/gii
+---
+2014/04/07 10:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/gii
+---
+2014/04/07 15:08:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/gii".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('index/gii')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/index/gii
+---
+2014/04/07 10:08:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/gii
+---
+2014/04/07 10:09:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/gii
+---
+2014/04/07 10:09:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/gii
+---
+2014/04/07 10:09:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/gii
+---
+2014/04/07 10:10:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/gii
+---
+2014/04/07 10:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/index.php/gii
+---
+2014/04/07 10:12:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('gii/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ajimatahari\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ajimatahari/gii
+---
