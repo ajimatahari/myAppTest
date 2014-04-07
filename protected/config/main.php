@@ -49,7 +49,7 @@ return array(
                                 //'about'=>'page/about',
                                 //'password'=>'site/forgot',
                                 //'user/'=>'user/index',
-                                '<controller:\w+>'=>'<controller>/index',
+                                //'<controller:\w+>'=>'<controller>/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
