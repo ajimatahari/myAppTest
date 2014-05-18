@@ -17,6 +17,60 @@ USE `myAppDb`;
 -- ---------------------------------------------------------
 
 
+-- CREATE TABLE "BiayaSekolah" -----------------------------
+CREATE TABLE `BiayaSekolah` ( 
+	`idData` Int( 255 ) AUTO_INCREMENT NOT NULL, 
+	`idSiswa` Int( 255 ) NOT NULL,
+	 PRIMARY KEY ( `idData` )
+ )
+CHARACTER SET = utf8
+COLLATE = utf8_general_ci
+ENGINE = InnoDB
+AUTO_INCREMENT = 1;
+-- ---------------------------------------------------------
+
+
+-- CREATE TABLE "Pendaftar" --------------------------------
+CREATE TABLE `Pendaftar` ( 
+	`idRegistrar` Int( 255 ) AUTO_INCREMENT NOT NULL, 
+	`NamaLengkap` VarChar( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+	 PRIMARY KEY ( `idRegistrar` )
+, 
+	CONSTRAINT `unique_idRegistrar` UNIQUE( `idRegistrar` ) )
+CHARACTER SET = utf8
+COLLATE = utf8_general_ci
+ENGINE = InnoDB
+AUTO_INCREMENT = 1;
+-- ---------------------------------------------------------
+
+
+-- CREATE TABLE "RegistrarRequirement" ---------------------
+CREATE TABLE `RegistrarRequirement` ( 
+	`idData` Int( 255 ) AUTO_INCREMENT NOT NULL, 
+	`idRegistrar` VarChar( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, 
+	`U_Pangkal` Int( 255 ) NOT NULL,
+	 PRIMARY KEY ( `idData` )
+ )
+CHARACTER SET = utf8
+COLLATE = utf8_general_ci
+ENGINE = InnoDB
+AUTO_INCREMENT = 1;
+-- ---------------------------------------------------------
+
+
+-- CREATE TABLE "Siswa" ------------------------------------
+CREATE TABLE `Siswa` ( 
+	`idSiswa` Int( 255 ) AUTO_INCREMENT NOT NULL, 
+	`NamaLengkap` VarChar( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+	 PRIMARY KEY ( `idSiswa` )
+ )
+CHARACTER SET = utf8
+COLLATE = utf8_general_ci
+ENGINE = InnoDB
+AUTO_INCREMENT = 1;
+-- ---------------------------------------------------------
+
+
 -- CREATE TABLE "User" -------------------------------------
 CREATE TABLE `User` ( 
 	`id` Int( 255 ) AUTO_INCREMENT NOT NULL, 
@@ -45,6 +99,22 @@ CHARACTER SET = utf8
 COLLATE = utf8_general_ci
 ENGINE = InnoDB
 AUTO_INCREMENT = 1;
+-- ---------------------------------------------------------
+
+
+-- Dump data of "BiayaSekolah" -----------------------------
+-- ---------------------------------------------------------
+
+
+-- Dump data of "Pendaftar" --------------------------------
+-- ---------------------------------------------------------
+
+
+-- Dump data of "RegistrarRequirement" ---------------------
+-- ---------------------------------------------------------
+
+
+-- Dump data of "Siswa" ------------------------------------
 -- ---------------------------------------------------------
 
 
